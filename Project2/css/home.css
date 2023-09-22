@@ -1,0 +1,80 @@
+.games-container{
+    margin: 15px;
+    height : fit-content;
+    margin-bottom: 10%;
+  }
+#usernameTile{
+    text-align: center;
+    margin:15px;
+  }
+
+h3{
+  text-align: center;
+}
+
+  div.gallery {
+    position: relative;
+    margin: 10px;
+    float: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    box-shadow:  rgba(217, 220, 223, 0.747) 0px 8px 20px -10px;
+  }
+  
+  div.gallery:hover .overlay {
+    opacity: 0.88;
+  }
+  
+  
+  div.gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(166, 47, 206);
+    border-radius: 40px;
+    display: table;
+    text-align: center;
+  }
+
+  .textoverlay{
+    display: table-cell;
+        vertical-align: middle;
+      
+  }
+  
+  .current-game{
+    height: 30%;
+    border:solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+    margin:15px;
+  }
+  
+  .close_btn_area{
+    text-align: right;
+  }
+  .close_btn{
+    background-color: whitesmoke;
+    border-color: grey;
+    border:solid;
+    border-width: 1px;
+    border-radius: 70%;
+    height: 35px;
+    width:35px;
+    margin:20px;
+    text-align: center;
+  }

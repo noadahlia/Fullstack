@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/log.css">
+    <title>FullGames - Free online games</title>
+</head>
+
+<body>
+    <main class="main-container">
+        <div class="form_wrapper">
+            <div class="form_item">
+                <form class="form_log_in" action="home.html" method="post" onsubmit="return logIn()">
+                    <fieldset>
+
+                        <legend>Sign in</legend>
+                        <div>
+                            <label for="username_log">User name:</label>
+                            <input type="text" placeholder="enter user name" id="username_log"
+                                name="Username" required />
+                        </div>
+
+                        <div>
+                            <label for="password_log">Password:</label>
+                            <input type="password" placeholder="enter password" id="password_log"
+                                name="Password" required />
+                        </div>
+
+                        <div>
+                            <button id="enter" type="submit">Sign in</button>
+                            <button type="reset" class="cancelbtn">Cancel</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="form_item">
+
+                <form action="home.html" method="post" onsubmit="return signUp()">
+                    <fieldset>
+                        <legend>Sign up</legend>
+
+                        <div>
+                            <label for="username_sign_up">User name:</label>
+                            <input type="text" placeholder="enter user name" id="username_sign_up"
+                                name="Username" required />
+                            <p id="validation-username" class="validation"></p>
+                        </div>
+
+                        <div>
+                            <label for="password_sign_up">Password:</label>
+                            <input type="password" id="password_sign_up" placeholder="enter password"
+                                name="Password" required />
+                            <p id="validation-password" class="validation"></p>
+                        </div>
+
+                        <div>
+                            <label for="password_again">Enter password again:</label>
+                            <input type="password" id="password_again" placeholder="enter password again"
+                                name="Password_again" required />
+                            <p id="validation-again" class="validation"></p>
+                        </div>
+
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="enter email address" id="email" name="Email"
+                                required />
+                            <p id="validation-email" class="validation"></p>
+                        </div>
+
+                        <div>
+                            <button id="sign_up" type="submit">Sign up</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="init.js"></script>
+<script src="js/log.js"></script>
+</html>

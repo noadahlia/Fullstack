@@ -1,0 +1,45 @@
+body {
+  background-color: rgba(0, 0, 0, 0.925);
+  color: rgb(255, 255, 255);
+  margin:0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+
+.main-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: fit-content;
+  border-radius: 5px;
+  background-color: rgba(53, 45, 45, 0.781);
+  border: solid;
+  border-width: 2px;
+  box-shadow: rgb(202, 211, 221) 0px 20px 30px -10px;
+  display: block;
+  overflow: auto;
+  /*min-height: 100vh;*/
+}
+
+.logout_btn, .home_btn{
+  border: solid;
+  border-width: 1px;
+  border-color: blueviolet;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.icons{
+  position:fixed;
+  top:0;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.icons li{
+  top:0;
+  display: inline;
+  float: left;
+  margin: 5px;
+}

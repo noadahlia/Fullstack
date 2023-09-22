@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TO-DO</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/addTask.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/task.css">
+    <link rel="stylesheet" href="../css/addTaskButton.css">
+    <link rel="stylesheet" href="../css/signIn.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../js/user.js"></script>
+    <script src="../db-api/db-api.js"></script>
+    <script src="../js/network.js"></script>
+    <script src="../js/fxmlHttpRequest.js"></script>
+    <script src="../js/server.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <!--signIn-from-->
+    <template id="signInTemplate">
+        <div class="container-signIn">
+            <div class="signIn-card">
+                <div class="signIn-card-image">
+                    <h2 class="signIn-card-heading">
+                        Get started
+                        <small>Let us create your account</small>
+                    </h2>
+                </div>
+                <form class="signIn-card-form">
+                    <div class="signIn-input">
+                        <input id="username" type="text" class="inp signIn-input-field" required />
+                        <label class="signIn-input-label">Full name</label>
+                    </div>
+                    <div class="signIn-input">
+                        <input id="email" type="text" class="inp signIn-input-field" required />
+                        <label class="signIn-input-label">Email</label>
+                    </div>
+                    <div class="signIn-input">
+                        <input id="password" type="password" class="inp signIn-input-field" required />
+                        <label class="signIn-input-label">Password</label>
+                    </div>
+                    <div class="signIn-action">
+                        <button id="signInBtn" class="signIn-action-button">Get started</button>
+                    </div>
+                </form>
+                <div class="signIn-card-info">
+                    <p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="logInTemplate">
+        <div class="container-logIn">
+            <div class="signIn-card">
+                <div class="signIn-card-image">
+                    <h2 class="signIn-card-heading">
+                        Log in to your account
+                    </h2>
+                </div>
+                <form class="signIn-card-form">
+                    <div id="login_error" class="hide" style="border:solid;border-color: red;border-radius: 5px;color:red; border-width: 1px;">
+                          Username or password are incorrect. Please try again.
+                    </div>
+                    <div class="signIn-input">
+                        <input id="username" type="text" class="inp signIn-input-field" required />
+                        <label class="signIn-input-label">Username</label>
+                    </div>
+
+                    <div class="signIn-input">
+                        <input id="password" type="password" class="inp signIn-input-field" required />
+                        <label class="signIn-input-label">Password</label>
+                    </div>
+                    <div class="signIn-action">
+                        <button id="logInBtn" class="signIn-action-button">Get started</button>
+                    </div>
+                </form>
+                <div class="signIn-card-info">
+                    <p>By signing up you are agreeing to our <a id="registerLnk" href="#">Register now</a></p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="mainWindow">
+        <div class="header-area" >
+            <nav >
+                <div class="topnav" id="myTopnav">
+                    <a id="Home" href="#">Home</a>
+                    <a id="toDo" href="#">TO-DO</a>
+                    <a id="logout" href="#" style="float:right;border:solid;border-radius:15px;">Log out</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+            <template id="AddTaskForm">
+                <form id="addTaskForm">
+                    <div class="containor-task-box">
+                        <div class="add-task-box">
+                            <div class="add-task-input">
+                                <input id="task-input" type="text" name="">
+                                <label>Add new...</label>
+                            </div>
+                        </div>
+                        <div class="btn-add-task">
+                            <button id="add-button" class="button--tertiary">+</button>
+                        </div>
+                    </div>
+                </form>
+            </template>
+            <div class="intro-area">
+                <template id="main">
+                    <div class="container-intro">
+                        <h2 id="title-text">Start where you are. Use what you have. Do what you can.</h2>
+                    </div>
+                </template>
+                <div class="container-cards">
+                    <div class="row-cards">
+                        <template id="task-card">
+                            <div class="col-lg-4">
+                                <div class="card card-margin">
+                                    <div class="card-header no-border">
+                                        <h5 class="card-title">MICHAL</h5>
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="widget-49">
+                                            <div class="widget-49-title-wrapper">
+                                                <div class="widget-49-date-primary">
+                                                    <span class="widget-49-date-day">09</span>
+                                                    <span class="widget-49-date-month">apr</span>
+                                                </div>
+                                                <div class="widget-49-meeting-info">
+                                                    <span id="task-text" class="widget-49-pro-title"></span>
+                                                </div>
+                                            </div>
+                                            <div class="widget-49-meeting-action">
+                                                <a href="#" class="btn btn-sm card__link">link</a>
+                                                <div>
+                                                    <button class="btn-del btn-delete">
+                                                        <span class="mdi mdi-delete mdi-24px"></span>
+                                                        <span class="mdi mdi-delete-empty mdi-24px"></span>
+                                                        <span>X</span>
+                                                    </button>
+                                                    <div class="checkbox-container">
+                                                        <label class="checkbox">
+                                                            <input id="checkboxInput" type="checkbox" />
+                                                            <svg viewBox="0 0 21 18">
+                                                                <symbol id="tick-path" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                                </symbol>
+                                                                <defs>
+                                                                    <mask id="tick">
+                                                                        <use class="tick mask" href="#tick-path" />
+                                                                    </mask>
+                                                                </defs>
+                                                                <use class="tick" href="#tick-path" stroke="currentColor" />
+                                                                <path fill="white" mask="url(#tick)" d="M18 9C18 10.4464 17.9036 11.8929 17.7589 13.1464C17.5179 15.6054 15.6054 17.5179 13.1625 17.7589C11.8929 17.9036 10.4464 18 9 18C7.55357 18 6.10714 17.9036 4.85357 17.7589C2.39464 17.5179 0.498214 15.6054 0.241071 13.1464C0.0964286 11.8929 0 10.4464 0 9C0 7.55357 0.0964286 6.10714 0.241071 4.8375C0.498214 2.39464 2.39464 0.482143 4.85357 0.241071C6.10714 0.0964286 7.55357 0 9 0C10.4464 0 11.8929 0.0964286 13.1625 0.241071C15.6054 0.482143 17.5179 2.39464 17.7589 4.8375C17.9036 6.10714 18 7.55357 18 9Z" />
+                                                            </svg>
+                                                            <svg class="lines" viewBox="0 0 11 11">
+                                                                <path d="M5.88086 5.89441L9.53504 4.26746" />
+                                                                <path d="M5.5274 8.78838L9.45391 9.55161" />
+                                                                <path d="M3.49371 4.22065L5.55387 0.79198" />
+                                                            </svg>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

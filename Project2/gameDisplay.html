@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/game_display.css">
+
+
+    <title>FullGames - Free online games</title>
+</head>
+
+<body>
+    <ul class="icons">
+        <li><div class="logout_btn">
+             <img src="images/logout.png" width="40" height="40" onclick="logout()">
+         </div></li> 
+         <li><div class="home_btn">
+             <img src="images/home.png" width="40" height="40" onclick="home()">
+         </div></li>
+     </ul>
+    <div class="main-container">
+        <h1 id="game_title" class="game_title" style="text-align: center;">
+            <!-- Word Guessing -->
+            <h1>
+                <div class="wrapper">
+                    <div class="scores column">
+                        <h4 style="font-size: 18px;">Your Score:</h4>
+                        <div id="score">0</div>
+                        <h4 style="font-size: 18px;">Best Scores:</h4>
+                        <table id="score_table" class="score_table">
+                        </table>                    
+                    </div>
+                    <div class="embedded_game column">
+                        <iframe id="game_frm"></iframe>
+                    </div>
+                </div>
+
+    </div>
+    <script src="js/gameDisplay.js"></script>
+    <script src="js/icons_click.js"></script>
+</body>
+
+</html>

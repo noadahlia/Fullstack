@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <title>FullGames - Free online games</title>
+</head>
+
+<body>
+    <ul class="icons">
+       <li><div class="logout_btn">
+            <img src="images/logout.png" width="40" height="40" onclick="logout()" >
+        </div></li> 
+        <li><div class="home_btn">
+            <img src="images/home.png" width="40" height="40" onclick="home()">
+        </div></li>
+    </ul>
+    <div class="main-container">
+        <div id="usernameTitle"></div>
+        <h3>Play here to a lot of various games. Save your records and compare to others gamers to become the best!</h3>
+        <div class="games-container">
+
+            <div class="gallery" id="wordGuessing" onclick="openGame('wordGuessing')">
+                <img src="images/wordGuessing.png" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Click to play</div>
+                </div>
+            </div>
+
+            <div class="gallery" id="snake" onclick="openGame('snake')">
+                <img src="images/snake.png" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Click to play</div>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <img src="images/angrybirds.png" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Coming soon...</div>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <img src="images/Battleborn_cover_art.jpg" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Coming soon...</div>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <img src="images/girl.png" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Coming soon...</div>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="images/mario.png" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Coming soon...</div>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="images/nyancat.jpg" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Coming soon...</div>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="images/war.png" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Coming soon...</div>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="images/wizard.jpg" width="600" height="400">
+                <div class="overlay">
+                    <div class="textoverlay">Coming soon...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        let user = localStorage.getItem("user");
+        user = JSON.parse(user);
+        let username = user.userName;
+        document.getElementById("usernameTitle").innerHTML = "Welcome, " + username;
+        document.getElementById("usernameTitle").style.fontSize = "50px"
+        document.getElementById("usernameTitle").style.textAlign = "center";
+        function openGame(game) {
+            let url = "./choose_snake.html";
+            if (game == "wordGuessing") {
+                url = "./games/wordGuessing.html";
+            }
+            const frame = "./gameDisplay.html";
+            localStorage.setItem("url", url);
+            localStorage.setItem("game", game);
+
+            window.location.href = frame;
+        }
+    </script>
+    <script src="js/icons_click.js"></script>
+
+</body>
+
+</html>

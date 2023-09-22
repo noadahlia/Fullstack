@@ -1,0 +1,60 @@
+.wrapper {
+    height: fit-content;
+    /*min-height: 100vh;*/
+    text-align: center;
+}
+
+
+.column{
+    width: fit-content;
+    vertical-align: top;
+    height: fit-content;
+}
+
+.scores {
+    display: inline-block;
+    width: 20%;
+    border-radius: 5px;
+    background-color: rgba(53, 45, 45, 0.781);
+    border: solid;
+    border-width: 2px;
+    box-shadow: rgb(202, 211, 221) 0px 10px 10px -10px;
+    margin-right: 2%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.embedded_game {
+    display: inline-block;
+    width: 70%;
+    border-radius: 5px;
+    background-color: rgba(53, 45, 45, 0.781);
+    border: solid;
+    border-width: 2px;
+    box-shadow: rgb(202, 211, 221) 0px 10px 10px -10px;
+    text-align: center;
+    vertical-align:middle;
+}
+
+iframe{
+    height: 440px;
+    width: 98%;
+    border:none;
+    margin-top: 5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.score_table{
+    overflow-y: auto;
+    text-align:center; 
+    font-size: 15px;
+    border-spacing: 10px 2px;
+    table-layout: auto;
+    width:100%;
+}

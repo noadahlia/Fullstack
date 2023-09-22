@@ -1,0 +1,117 @@
+.text-input {
+    width: 97%;
+    height: 40%;
+    background-color: #0c1924; /* Dark blue background color */
+    padding: 10px;
+    overflow: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: #fff; /* Text color */
+}
+
+.options {
+    width: 97%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #0c1924; /* Dark blue background color */
+}
+
+.options-select,
+.options-button,
+.rounded-color-input {
+    margin-right: 10px;
+    background-color: #142c48; /* Dark blue button background */
+    border: 1px solid #007bff; /* Blue border color */
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+}
+
+.options-select {
+    padding: 0;
+    width: 100px;
+    height: 32px;
+    color: #fff;
+}
+
+.options-select option {
+    color: #000; /* Option text color */
+}
+
+.options-button i {
+    font-size: 16px;
+    color: #fff;
+}
+
+.rounded-color-input {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: none;
+    border: solid 1px #007bff; /* Blue border color */
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    margin-right: 10px;
+    -webkit-appearance: none;
+}
+
+.rounded-color-input::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.rounded-color-input::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.virtual-keyboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard-row {
+    display: flex;
+}
+
+.keyboard-key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #007bff; /* Blue border color */
+    border-radius: 5px;
+    background-color: #142c48; /* Dark blue button background */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.large-space {
+    width: 600px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #007bff; /* Blue border color */
+    border-radius: 5px;
+    background-color: #142c48; /* Dark blue button background */
+    cursor: pointer;
+}

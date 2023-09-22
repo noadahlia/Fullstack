@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullGames - Free online games</title>
+    <link rel="stylesheet" href="choose_snake.css">
+</head>
+
+<body>
+    <h1>How good are you?</h1>
+    <br><br><br>
+    <div id="flex-container">
+        <button id="btn1">Beginner</button>
+        <button id="btn2">Intermediate</button>
+        <button id="btn3">Advanced</button>
+    </div>
+</body>
+<script>
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+    const btn3 = document.getElementById("btn3");
+    btn1.addEventListener("click", click);
+    btn2.addEventListener("click", click);
+    btn3.addEventListener("click", click);
+
+    localStorage.setItem("score",0);
+
+    function click() {
+        localStorage.setItem("level-snake", this.id[3]);
+        window.location.href = "./games/snake.html";
+    }
+
+
+</script>
+
+</html>

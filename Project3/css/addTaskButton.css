@@ -1,0 +1,69 @@
+:root {
+    --colour-black: #1e1e1e;
+    --colour-white: #ffffff;
+  }
+  
+  
+  button,
+  .button{
+    --button: hsl(0, 0%, 12%);
+    --button-hover: hsl(0, 0%, 20%);
+    --button-active:  hsl(0, 0%, 30%);
+    --button-visited: hsl(0, 0%, 20%);
+    --button-colour: var(--colour-white);
+    --button-border: var(--colour-black);
+  }
+  
+  
+  .button--tertiary {
+    --button: hsl(0, 100%, 90%);
+    --button-hover: hsl(0, 100%, 94%);
+    --button-active:  hsl(0, 100%, 84%);
+    --button-visited: hsl(0, 100%, 94%);
+    --button-colour: var(--colour-black);
+     --button-border: var(--colour-black);
+  }
+  
+  
+  button {
+    padding: .9rem 1.7rem;
+    color: var(--button-colour);
+    font-weight: 500;
+    font-size: 34px;
+    transition: all 0.3s ease-in-out;
+    background: var(--button);
+    border: solid 1px var(--button-border);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px var(--colour-white);
+    margin-right: 1em;
+  }
+  
+  button:hover {
+    text-decoration: underline;
+    background: var(--button-hover);
+    box-shadow: inset 0 0 0 4px var(--colour-white);
+  }
+  
+  button:active {
+    background: var(--button-active);
+  }
+  
+  button:visited {
+    background: var(--button-visited);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  

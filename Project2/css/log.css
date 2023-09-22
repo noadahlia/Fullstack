@@ -1,0 +1,47 @@
+.validation {
+    display: inline;
+}
+
+form div {
+    margin: 20px;
+    
+}
+.form_wrapper{
+  vertical-align: middle;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+
+button {
+    margin: 5px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+legend {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+label {
+    font-weight: bolder;
+}
+
+input {
+    padding: 5px 8px;
+}
+
+
+fieldset{
+    height: 90%;
+    margin:  5px 10px;
+}
+
