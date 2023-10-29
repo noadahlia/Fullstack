@@ -1,0 +1,85 @@
+.home-container {
+  text-align: center;
+}
+.subcontainer{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+.header{
+  background: linear-gradient(to bottom, #c2e2ff, #85b3ff); /* Dégradé de bleu navy */
+  height:90px;
+  display: flex; /* Utilise flexbox */
+  align-items: center; /* Centre verticalement le contenu */
+  padding-left: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.navbar {
+  width: 15%; /* 20% pour la barre de navigation */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background:linear-gradient(to bottom, #c2e2ff, #85b3ff);  
+}
+
+.navbarList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.navbarItem {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff; /* Change la couleur du texte en blanc */
+  width: 100%;
+  height:50px;
+  text-align: left;
+  background: linear-gradient(to bottom, #c2e2ff, #85b3ff); /* Dégradé de bleu navy */
+  transition: transform 0.3s; /* Ajoute une transition pour une animation plus fluide */
+  display: flex; /* Utilise flexbox */
+  align-items: center; /* Centre verticalement le contenu */
+}
+
+.navbarOption{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 15px;
+}
+
+.navbarItem a.active {
+  font-weight: bold;
+  /*color: #cf3a6c;*/
+  /*background-color: #e1a0b6;*/
+  text-decoration: none;
+
+}
+
+
+.navbarItem:hover {
+  font-weight: bold;
+  font-size: 1.3rem; /* Taille légèrement agrandie */
+  transform: scale(1.1); /* Agrandit le bouton de 10% au survol */
+
+}
+
+.outlet {
+  width: 80%; /* 80% pour l'élément Outlet */
+  padding: 1rem;
+  /* Ajoutez d'autres styles selon vos besoins */
+}
+

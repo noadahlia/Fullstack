@@ -1,0 +1,64 @@
+.photo-img {
+  width: 200px;
+  height: auto;
+  background-color: #f5f5f5;
+  /* border-radius: 10px; */
+  text-align: center;
+  display: flex;
+  /* flex: 20%; */
+  justify-content: center;
+  border: 2px #333 solid;
+  margin: 15px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.photo-title {
+  margin-top: 5px;
+  font-size: 12px;
+  color: rgb(71, 71, 197);
+  color: #000000;
+}
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  justify-content: center;
+  background-color: #f5f5f5;
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-height: 470px;
+  padding: 10px;
+  /* border: 10px #333 solid; */
+}
+.photos-title {
+  font-style: bold;
+  color: #333;
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+.load-more-btn {
+  width: fit-content;
+  border: 2px #ffffff solid;
+  border-radius: 15px;
+  background-color: #3730a5;
+  color: #000000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+h2{
+  color: #000000;
+}

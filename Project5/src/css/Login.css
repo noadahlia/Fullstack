@@ -1,0 +1,64 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ebf5ff, #b3d9ff);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px; /* Coins moins ronds */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  background: linear-gradient(to bottom, #c2e2ff, #85b3ff); /* Dégradé de bleu navy */
+  max-width: 400px;
+}
+
+h2 {
+  font-size: 2.5rem; /* Augmentation de la taille du titre "Login" */
+  color: #ffffff !important; /* Couleur bleu clair */
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 1.2rem; /* Réduction de la taille du texte "Username" et "Password" */
+  margin-bottom: 1rem;
+  color: #ffffff; /* Couleur bleu clair */
+}
+input {
+  padding: 0.8rem; /* Réduction de la taille du padding */
+  border: none;
+  border-radius: 5px; /* Coins moins ronds */
+  background-color: #fff;
+  color: #1a1a2e; /* Couleur bleu nuit */
+  font-size: 1.2rem; /* Réduction de la taille de la police */
+  margin-bottom: 1rem;
+  width: 90%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #405273; /* Couleur bleu moyen */
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+}
+
+.login-button {
+  padding: 1.2rem 3.5rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 10px; /* Coins moins ronds */
+  background-image: linear-gradient(to bottom right, #0077cc, #00bfff); /* Dégradé de bleu */
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.login-button:hover {
+  background-image: linear-gradient(to bottom right, #00bfff, #0077cc);
+}

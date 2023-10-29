@@ -1,0 +1,57 @@
+/* Comments.css */
+.comments-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .comments {
+    background: linear-gradient(to bottom, #c2e2ff, #a0beef); /* Dégradé de bleu navy */
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative; /* Permet de positionner le bouton Close par rapport à ce conteneur */
+    text-align: center;
+    margin: auto;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 10px; /* Ajoute un espace autour du bouton pour le rendre plus grand */
+    background-color: #ff5555; /* Couleur de fond pour mettre en évidence */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .close-button:hover {
+    background-color: #ff3333; /* Couleur de fond au survol pour un effet visuel */
+  }
+  
+  .comment {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Dégradé de blanc */
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative; /* Permet de positionner le bouton Close par rapport à ce conteneur */
+    text-align: left;
+    margin:auto;
+    margin-bottom: 10px;
+  }
