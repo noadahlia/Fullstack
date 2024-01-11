@@ -1,0 +1,58 @@
+/* Votre CSS global ou là où vous gérez les styles de votre application */
+
+.document-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px auto; /* 10px en haut et en bas, auto à gauche et à droite pour centrer horizontalement */
+  padding: 10px 100px;
+  width:70%
+}
+
+.pdf-logo {
+  background-image: url('../../public/pdf_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.document-info {
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* Styles pour la popup */
+.doc_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;  /* 80% de la largeur de la fenêtre */
+  height: 80vh; /* 100% de la hauteur de la fenêtre */
+  max-width: 800px; /* Facultatif : pour limiter la largeur maximale */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.doc-popup img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ajoutez d'autres styles au besoin pour personnaliser davantage votre mise en page et votre apparence */

@@ -1,0 +1,64 @@
+/* Patient.css */
+.user-info .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.user-info-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width:50%;
+  margin:auto;
+}
+
+.user-info {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between; /* Aligner les éléments à gauche et à droite */
+}
+
+.user-info label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.user-info input {
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 50%; /* Utiliser un pourcentage pour que la largeur s'ajuste dynamiquement */
+  margin-right:15px;
+}
+
+.user-info input.non-editable {
+  background-color: #f5f5f5;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.save-btn-container{
+  text-align: right;
+  margin-top: 30px;
+  margin-right:15px ;
+}
+
+.save-button {
+  background-color: #2196f3; /* Green color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-button:hover {
+  background-color: #15b80f; /* Darker green color on hover */
+}

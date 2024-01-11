@@ -1,0 +1,15 @@
+/* App.css */
+
+body {
+  background: linear-gradient(to bottom, #d1e9f6, #e1ffd9); /* Dégradé léger de bleu-vert plus clair */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Choisissez une police de caractères appropriée */
+  min-height: 100vh; /* Remplissage de la hauteur de la vue */
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+}

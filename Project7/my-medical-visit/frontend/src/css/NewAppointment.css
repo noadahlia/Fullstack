@@ -1,0 +1,81 @@
+/* NewAppointment.css */
+
+.new-appointment-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.new-appointment-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.new-appointment-container label {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.new-appointment-container select,
+.new-appointment-container input,
+.new-appointment-container button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.new-appointment-container button {
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+.new-appointment-container button:hover {
+  background-color: #2980b9;
+}
+
+.new-appointment-container .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  border: 2px solid transparent;
+}
+
+.new-appointment-container .popup-success {
+  background-color: rgba(76, 175, 79, 0.408);
+  border-color: #4CAF50;
+}
+
+.new-appointment-container .popup-error {
+  background-color: rgba(231, 77, 60, 0.473);
+  border-color: #e74c3c;
+}
+
+.new-appointment-container .popup-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.new-appointment-container .popup-close:hover {
+  color: #fff;
+}

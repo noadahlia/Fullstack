@@ -1,0 +1,83 @@
+/* Style général du calendrier */
+.rbc-calendar {
+    font-family: Arial, sans-serif;
+    border-radius: 20px; /* Angles arrondis */
+    height: 600px;
+  }
+  
+  /* Style des jours de la semaine */
+  .rbc-header {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style des événements du calendrier */
+  .rbc-event {
+    background-color: #3cb371; /* Vert médical clair */
+    color: #fff;
+    border: none; /* Supprimer la bordure */
+    border-radius: 8px; /* Angles arrondis */
+  }
+  
+  /* Style du conteneur de l'événement (peut être ajusté pour le padding) */
+  .rbc-event-content {
+    padding: 5px; /* Espace interne des événements */
+  }
+  
+  /* Style des boutons de navigation du calendrier */
+  .rbc-btn-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Style du bouton "Aujourd'hui" */
+  .rbc-btn-group button {
+    background-color: #007bff; /* Bleu médical clair */
+    color: #fff;
+    border: none;
+    margin: 2px;
+    border-radius: 5px; /* Angles arrondis */
+  }
+  
+  /* Style du texte des étiquettes d'heure */
+  .rbc-time-header-content {
+    color: #333;
+  }
+  
+  /* Style des heures dans le calendrier */
+  .rbc-time-gutter {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px; /* Angles arrondis */
+  }
+  
+  /* Style de la barre de défilement du calendrier (si nécessaire) */
+  .rbc-scroll-view {
+    overflow: auto;
+    height: 600px; /* Ajustez la hauteur selon vos besoins */
+  }
+  
+  /* Style des séparateurs entre les créneaux horaires (lignes verticales) */
+  .rbc-timeslot-group {
+    border-left: none; /* Supprimer les lignes de séparation */
+    border-right: none; /* Supprimer les lignes de séparation */
+  }
+  
+  /* Style des créneaux horaires (lignes horizontales) */
+  .rbc-timeslot {
+    border-top: none; /* Supprimer les lignes de séparation */
+    border-bottom: 1px solid #ddd; /* Ligne inférieure légère */
+  }
+  
+  /* Style des jours de la semaine (lignes horizontales) */
+.rbc-row-bg + .rbc-row {
+  border-top: none; /* Supprimer les lignes de séparation */
+}
+
+/* Style des jours de la semaine (bordures autour des cellules) */
+.rbc-header + .rbc-header {
+  border-left: none; /* Supprimer les lignes de séparation entre les jours */
+}
+
+.rbc-event-label{
+    display: none !important;
+}
